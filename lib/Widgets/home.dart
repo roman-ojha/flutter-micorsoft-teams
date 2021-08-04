@@ -21,7 +21,10 @@ class HomePageState extends State<HomePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: TeamsAppBar(_currentNavBarIndex).customAppBar(),
-        body: AppBody(_currentNavBarIndex, _mainPageColor),
+        body: AppBody(
+          _currentNavBarIndex,
+          _mainPageColor,
+        ),
         bottomNavigationBar:
             AppBottomNavigationBar(_currentNavBarIndex, _changeCurrneNavIndex),
       ),
