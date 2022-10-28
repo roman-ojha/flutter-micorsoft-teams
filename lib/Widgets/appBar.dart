@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 class TeamsAppBar {
-  final _tilteName = [
-    "Feed",
-    "Chat",
-    "Teams",
-    "Assignment",
-    "Calendar",
-    "More"
-  ];
-  final _currentNavIndex;
+  var _currentNavIndex;
   TeamsAppBar(this._currentNavIndex);
+
+  List<String> _getTitleName() {
+    var _tilteName = [
+      "Feed",
+      "Chat",
+      "Teams",
+      "Assignment",
+      "Calendar",
+      "More"
+    ];
+    return _tilteName;
+  }
 
   customAppBar() {
     return AppBar(
@@ -28,7 +32,7 @@ class TeamsAppBar {
         ),
       ),
       title: Text(
-        "${_tilteName[_currentNavIndex]}",
+        "${_getTitleName()[_currentNavIndex]}",
         style: TextStyle(fontStyle: FontStyle.italic),
       ),
       actions: <Widget>[

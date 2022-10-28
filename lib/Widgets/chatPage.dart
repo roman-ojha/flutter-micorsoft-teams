@@ -81,10 +81,11 @@ class ChatPage extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                  border: Border(
-                top: BorderSide(color: Colors.white24),
-                bottom: BorderSide(color: Colors.white24),
-              )),
+                border: Border(
+                  top: BorderSide(color: Colors.white24),
+                  bottom: BorderSide(color: Colors.white24),
+                ),
+              ),
               child: Row(
                 children: <Widget>[
                   _imageOfChatPageUser(
